@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.AI;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
@@ -105,7 +105,7 @@ public class Enemy : MonoBehaviour
                         lastFired = Time.time + fireRate;
                     }
 
-                    Fire();
+                    StartCoroutine("Fire");
                 }
             }
 
@@ -133,8 +133,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Fire() // Same as in WeaponSystem
+    IEnumerator Fire() // Same as in WeaponSystem
     {
+        yield return new WaitForSeconds(0.1f); // To avoid enemy from firing just from seeing the player
         if (!usingShotgun)
         {
             audioSource.clip = fireSound;
@@ -171,6 +172,7 @@ public class Enemy : MonoBehaviour
         enemyAnimation.enabled = false;
         RigidbodyState(false);
         ColliderState(true);
+        this.gameObject.layer = 11;
         Debug.Log("enemy dead");
     }
 
