@@ -14864,6 +14864,16 @@ PrefabInstance:
       propertyPath: music
       value: 
       objectReference: {fileID: 314521795}
+    - target: {fileID: 1050496544156199517, guid: f2efaad8f91854c479ec2e38ec46d101,
+        type: 3}
+      propertyPath: Consumption
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050496544156199517, guid: f2efaad8f91854c479ec2e38ec46d101,
+        type: 3}
+      propertyPath: Regeneration
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1050496544156199518, guid: f2efaad8f91854c479ec2e38ec46d101,
         type: 3}
       propertyPath: guide
@@ -15081,7 +15091,7 @@ PrefabInstance:
     - target: {fileID: 8481042891420530014, guid: 4ca79fbbaa0a83e4fad0e952ddf4f5e5,
         type: 3}
       propertyPath: bulletSpeed
-      value: 400
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 8481042891420530014, guid: 4ca79fbbaa0a83e4fad0e952ddf4f5e5,
         type: 3}
