@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
  
  void OnCollisionStay(Collision other)
 	{
-		if (other.gameObject.layer == 8)
+		if (other.gameObject.layer == 8 || other.gameObject.layer == 11)
 		{
 			grounded = true;
 		}	
