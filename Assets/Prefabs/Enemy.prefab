@@ -786,11 +786,12 @@ MonoBehaviour:
   enemyVision: {fileID: 4986886853137575545}
   audioSource: {fileID: 4986886853110433032}
   fireSound: {fileID: 8300000, guid: 50c1681513090c9469975df97b3ae358, type: 3}
-  shotgunFireSound: {fileID: 8300000, guid: 270668e9711825547b91f8d300bd96f3, type: 3}
+  shotgunFireSound: {fileID: 8300000, guid: c1c87d76fc614bf4881d5646a9242529, type: 3}
   visionDistance: 50
   attackDistance: 100
   health: 2
   speed: 12
+  reactionTime: 0.2
   fireRate: 0.6
   hasSpottedPlayer: 0
   lastFired: 0

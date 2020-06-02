@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ElevatorOpen : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Timer timer;
     void Awake()
     {
         StartCoroutine("Move");
@@ -18,5 +18,6 @@ public class ElevatorOpen : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             transform.position = Vector3.Lerp(transform.position, transform.forward * -10f, 2f * Time.deltaTime);
         }
+        timer.timerStarted = true;
     }
 }

@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public Text quality;
+
+
     public void PlayGame()
     {
         Debug.Log("You are now playing");
