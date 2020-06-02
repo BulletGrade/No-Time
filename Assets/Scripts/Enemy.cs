@@ -14,7 +14,8 @@ public class Enemy : MonoBehaviour
     public float attackDistance = 100f;
     public float health = 3f;
     public float speed = 12f;
-    public float fireRate = 1.2f;
+    public float reactionTime = 0.2f;
+    public float fireRate = 0.6f;
     public bool hasSpottedPlayer = false;
     [HideInInspector]
     public float lastFired;
@@ -97,7 +98,7 @@ public class Enemy : MonoBehaviour
 
                     if (usingShotgun)
                     {
-                        lastFired = Time.time + fireRate + 2f;
+                        lastFired = Time.time + fireRate + 1.5f;
                     }
 
                     else
@@ -135,7 +136,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator Fire() // Same as in WeaponSystem
     {
-        yield return new WaitForSeconds(0.1f); // To avoid enemy from firing just from seeing the player
+        yield return new WaitForSeconds(reactionTime); // To avoid enemy from firing just from seeing the player
         if (!usingShotgun)
         {
             audioSource.clip = fireSound;

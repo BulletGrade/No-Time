@@ -789,16 +789,16 @@ MonoBehaviour:
   shotgunFireSound: {fileID: 8300000, guid: 270668e9711825547b91f8d300bd96f3, type: 3}
   visionDistance: 50
   attackDistance: 100
-  health: 3
+  health: 2
   speed: 12
-  fireRate: 1.2
+  fireRate: 0.6
   hasSpottedPlayer: 0
   lastFired: 0
   isZombie: 0
   usingShotgun: 0
   bullet: {fileID: 8508724658301459134, guid: 2679fdf9d8fda224799778421242a155, type: 3}
   shell: {fileID: 2437571288370690242, guid: 9b3247e156e4d024bab68f1622e3a0a1, type: 3}
-  bulletSpeed: 1000
+  bulletSpeed: 750
   offset: 2
   weaponSystem: {fileID: 0}
   hitSound: {fileID: 8300000, guid: 4982cc89df0ec264c8b56d120b786c85, type: 3}
