@@ -23,9 +23,12 @@ public class Checkpoint : MonoBehaviour
             if (doorToClose != null)
             {
                 doorToClose.position = placeToClose;
-                Destroy(antiCamper);
-                AlertEnemies();
             }
+            if (antiCamper != null)
+            {
+                Destroy(antiCamper);
+            }
+            AlertEnemies();
             if (isBossFight) // If it is boss fight, then a special music will play.
             {
                 musicSoundSource.Play();
