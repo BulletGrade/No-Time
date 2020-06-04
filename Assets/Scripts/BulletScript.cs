@@ -12,17 +12,21 @@ public class BulletScript : MonoBehaviour
     {
         if (gameObject != null)
         {
-            Destroy(gameObject, 5f);
+            Destroy(gameObject, despawnTime);
         }
     }
 
-    void OnCollisionEnter(Collision other) // This doesnt work, have to make it despawn upon hitting wall
+    void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Obstacle" && gameObject != null)
+        if (other.gameObject.layer == 8 || other.gameObject.layer == 9 && gameObject != null)
         {
             bulletRigidBody.velocity = Vector3.up;
             bulletRigidBody.useGravity = true;
             gameObject.layer = 0;
+        }
+        else if (other.gameObject.layer == 17 && gameObject != null)
+        {
+            Destroy(gameObject);
         }
     }
 }
