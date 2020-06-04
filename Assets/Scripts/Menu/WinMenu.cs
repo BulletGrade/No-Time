@@ -7,7 +7,7 @@ public class WinMenu : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+            SceneManager.LoadScene(1);
         }
 
         if (Input.GetKey(KeyCode.Escape))
